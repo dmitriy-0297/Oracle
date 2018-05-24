@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -35,6 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Водители = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.time_end = new System.Windows.Forms.DateTimePicker();
+            this.time_start = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.PremGo = new System.Windows.Forms.Button();
@@ -43,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.sumPrem = new System.Windows.Forms.TextBox();
-            this.time_end = new System.Windows.Forms.TextBox();
-            this.time_start = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -60,19 +61,26 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.LastName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Worker = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.Connect = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataSet9 = new CourseBD.DataSet9();
+            this.aUTOPERSONNELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTO_PERSONNELTableAdapter = new CourseBD.DataSet9TableAdapters.AUTO_PERSONNELTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Водители.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOPERSONNELBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Водители
@@ -83,12 +91,16 @@
             this.Водители.Location = new System.Drawing.Point(25, 12);
             this.Водители.Name = "Водители";
             this.Водители.SelectedIndex = 0;
-            this.Водители.Size = new System.Drawing.Size(651, 255);
+            this.Водители.Size = new System.Drawing.Size(695, 255);
             this.Водители.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.Controls.Add(this.dateTimePicker2);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.time_end);
+            this.tabPage1.Controls.Add(this.time_start);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.PremGo);
@@ -97,16 +109,30 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.sumPrem);
-            this.tabPage1.Controls.Add(this.time_end);
-            this.tabPage1.Controls.Add(this.time_start);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 226);
+            this.tabPage1.Size = new System.Drawing.Size(687, 226);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Расчет премии";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // time_end
+            // 
+            this.time_end.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time_end.Location = new System.Drawing.Point(134, 77);
+            this.time_end.Name = "time_end";
+            this.time_end.Size = new System.Drawing.Size(148, 22);
+            this.time_end.TabIndex = 11;
+            // 
+            // time_start
+            // 
+            this.time_start.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time_start.Location = new System.Drawing.Point(134, 11);
+            this.time_start.Name = "time_start";
+            this.time_start.Size = new System.Drawing.Size(148, 22);
+            this.time_start.TabIndex = 10;
             // 
             // label6
             // 
@@ -136,7 +162,7 @@
             this.PremGo.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PremGo.ForeColor = System.Drawing.Color.White;
             this.PremGo.Image = ((System.Drawing.Image)(resources.GetObject("PremGo.Image")));
-            this.PremGo.Location = new System.Drawing.Point(518, 165);
+            this.PremGo.Location = new System.Drawing.Point(571, 155);
             this.PremGo.Name = "PremGo";
             this.PremGo.Size = new System.Drawing.Size(110, 31);
             this.PremGo.TabIndex = 7;
@@ -164,7 +190,7 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView1.Location = new System.Drawing.Point(330, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(383, 11);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(298, 138);
@@ -212,23 +238,6 @@
             this.sumPrem.Size = new System.Drawing.Size(125, 22);
             this.sumPrem.TabIndex = 2;
             // 
-            // time_end
-            // 
-            this.time_end.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time_end.Location = new System.Drawing.Point(134, 76);
-            this.time_end.Name = "time_end";
-            this.time_end.Size = new System.Drawing.Size(170, 22);
-            this.time_end.TabIndex = 1;
-            // 
-            // time_start
-            // 
-            this.time_start.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time_start.Location = new System.Drawing.Point(134, 12);
-            this.time_start.Name = "time_start";
-            this.time_start.Size = new System.Drawing.Size(170, 22);
-            this.time_start.TabIndex = 0;
-            this.time_start.TextChanged += new System.EventHandler(this.time_start_TextChanged);
-            // 
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
@@ -237,7 +246,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 226);
+            this.tabPage2.Size = new System.Drawing.Size(687, 226);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Водители";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -248,7 +257,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(536, 191);
+            this.button1.Location = new System.Drawing.Point(572, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 28);
             this.button1.TabIndex = 1;
@@ -268,7 +277,7 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView2.Location = new System.Drawing.Point(18, 22);
+            this.dataGridView2.Location = new System.Drawing.Point(21, 22);
             this.dataGridView2.Name = "dataGridView2";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
@@ -279,12 +288,14 @@
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(610, 163);
+            this.dataGridView2.Size = new System.Drawing.Size(643, 163);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // tabPage3
             // 
             this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
+            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.txtOtg);
             this.tabPage3.Controls.Add(this.txtName);
@@ -296,7 +307,6 @@
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.LastName);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.Worker);
             this.tabPage3.Controls.Add(this.label7);
@@ -304,7 +314,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(643, 226);
+            this.tabPage3.Size = new System.Drawing.Size(687, 226);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Работа с водителями";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -430,14 +440,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // LastName
-            // 
-            this.LastName.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LastName.Location = new System.Drawing.Point(89, 121);
-            this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(100, 22);
-            this.LastName.TabIndex = 4;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -488,7 +490,7 @@
             this.Connect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Connect.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Connect.ForeColor = System.Drawing.Color.White;
-            this.Connect.Location = new System.Drawing.Point(547, 291);
+            this.Connect.Location = new System.Drawing.Point(591, 291);
             this.Connect.Name = "Connect";
             this.Connect.Size = new System.Drawing.Size(125, 31);
             this.Connect.TabIndex = 1;
@@ -502,18 +504,64 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(468, 270);
+            this.label4.Location = new System.Drawing.Point(521, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Соединение с базой данных";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.aUTOPERSONNELBindingSource;
+            this.comboBox1.DisplayMember = "LAST_NAME";
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(87, 117);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.ValueMember = "LAST_NAME";
+            // 
+            // dataSet9
+            // 
+            this.dataSet9.DataSetName = "DataSet9";
+            this.dataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aUTOPERSONNELBindingSource
+            // 
+            this.aUTOPERSONNELBindingSource.DataMember = "AUTO_PERSONNEL";
+            this.aUTOPERSONNELBindingSource.DataSource = this.dataSet9;
+            // 
+            // aUTO_PERSONNELTableAdapter
+            // 
+            this.aUTO_PERSONNELTableAdapter.ClearBeforeFill = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(287, 11);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(83, 22);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(287, 77);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.ShowUpDown = true;
+            this.dateTimePicker2.Size = new System.Drawing.Size(83, 22);
+            this.dateTimePicker2.TabIndex = 13;
             // 
             // DirForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(703, 340);
+            this.ClientSize = new System.Drawing.Size(744, 340);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Connect);
             this.Controls.Add(this.Водители);
@@ -531,6 +579,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOPERSONNELBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,8 +595,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox sumPrem;
-        private System.Windows.Forms.TextBox time_end;
-        private System.Windows.Forms.TextBox time_start;
         private System.Windows.Forms.Button Connect;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -560,7 +608,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox LastName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtOtg;
@@ -572,5 +619,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker time_start;
+        private System.Windows.Forms.DateTimePicker time_end;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private DataSet9 dataSet9;
+        private System.Windows.Forms.BindingSource aUTOPERSONNELBindingSource;
+        private DataSet9TableAdapters.AUTO_PERSONNELTableAdapter aUTO_PERSONNELTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -15,7 +15,18 @@ namespace CourseBD
     {
         public DirForm()
         {
+            OracleConnection ora = new OracleConnection("DATA SOURCE = EC11; PASSWORD = qwerty; USER ID = Dmitriy;");
             InitializeComponent();
+            ora.Open();
+            OracleCommand com = new OracleCommand("selectAutoPersonel", ora);
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.Parameters.Add("reg", OracleType.Cursor).Direction = ParameterDirection.Output;
+            OracleDataAdapter adapt = new OracleDataAdapter();
+            adapt.SelectCommand = com;
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            dataGridView2.DataSource = table;
+            ora.Close();
         }
 
         private void Connect_Click(object sender, EventArgs e)
@@ -29,7 +40,7 @@ namespace CourseBD
 
         private void PremGo_Click(object sender, EventArgs e)
         {
-            if (time_start.Text == "" || time_end.Text == "" || sumPrem.Text == "")
+            if (sumPrem.Text == "")
             {
                 ErrorInputLable er = new ErrorInputLable();
                 er.Show();
@@ -40,9 +51,11 @@ namespace CourseBD
                 ora.Open();
                 OracleCommand com = new OracleCommand("DRIVER_CASH", ora);
                 com.CommandType = System.Data.CommandType.StoredProcedure;
-                com.Parameters.Add("START_DATE", OracleType.Timestamp).Value = time_start.Text;
-                com.Parameters.Add("END_DATE", OracleType.Timestamp).Value = time_end.Text;
-                com.Parameters.Add("CASH", OracleType.Number).Value = sumPrem.Text;
+                string dateStart = (time_start.Value.Date + dateTimePicker1.Value.TimeOfDay).ToString("yyyy-MM-dd HH:mm:ss");
+                com.Parameters.Add("START_DATE", OracleType.Timestamp).Value = dateStart;
+                string dateEnd = (time_end.Value.Date + dateTimePicker2.Value.TimeOfDay).ToString("yyyy-MM-dd HH:mm:ss");
+                com.Parameters.Add("END_DATE", OracleType.Timestamp).Value = dateEnd;
+                com.Parameters.Add("CASH", OracleType.Number).Value = sumPrem.Text.ToString();
                 com.Parameters.Add("FIRST_PERSONNEL_V", OracleType.Char, 30).Direction = ParameterDirection.Output;
                 com.Parameters.Add("SECOND_PERSONNEL_V", OracleType.Char, 30).Direction = ParameterDirection.Output;
                 com.Parameters.Add("THIRD_PERSONNEL_V", OracleType.Char, 30).Direction = ParameterDirection.Output;
@@ -90,6 +103,8 @@ namespace CourseBD
 
         private void DirForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet9.AUTO_PERSONNEL' table. You can move, or remove it, as needed.
+            this.aUTO_PERSONNELTableAdapter.Fill(this.dataSet9.AUTO_PERSONNEL);
 
         }
 
@@ -122,23 +137,15 @@ namespace CourseBD
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (LastName.Text == "")
-            {
-                ErrorInputLable er = new ErrorInputLable();
-                er.Show();
-            }
-            else
-            {
                 OracleConnection ora = new OracleConnection("DATA SOURCE = EC11; PASSWORD = qwerty; USER ID = Dmitriy;");
                 ora.Open();
                 OracleCommand com = new OracleCommand("deleteAutoPers", ora);
                 com.CommandType = System.Data.CommandType.StoredProcedure;
-                com.Parameters.Add("lastName", OracleType.Char, 20).Value = LastName.Text;
+                com.Parameters.Add("lastName", OracleType.Char, 20).Value = comboBox1.Text;
                 com.ExecuteNonQuery();
                 DelWokerForm d = new DelWokerForm();
                 d.Show();
                 ora.Close();
-            }
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -182,6 +189,16 @@ namespace CourseBD
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+        
         }
     }
 }

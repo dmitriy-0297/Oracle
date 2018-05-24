@@ -20,3 +20,27 @@ D:\CourseBD\CourseBD\CourseBD\obj\Debug\CourseBD.updateForm.resources
 D:\CourseBD\CourseBD\CourseBD\obj\Debug\CourseBD.DriverForm.resources
 D:\CourseBD\CourseBD\CourseBD\obj\Debug\CourseBD.ErrorTime.resources
 D:\CourseBD\CourseBD\CourseBD\obj\Debug\CourseBD.ErrorInsertPartJournal.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\bin\Debug\CourseBD.exe.config
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\bin\Debug\CourseBD.exe
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\bin\Debug\CourseBD.pdb
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.csprojResolveAssemblyReference.cache
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.AddForm.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.Conn.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.DelWokerForm.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.DirForm.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.DispForm.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.DriverForm.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.ErrorInp.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.ErrorInputLable.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.ErrorInsertPartJournal.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.ErrorTime.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.updateForm.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.WhatExit.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.Properties.Resources.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.StartWin.resources
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.csproj.GenerateResource.cache
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.csproj.CoreCompileInputs.cache
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.exe
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.pdb
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\gdk17\OneDrive\Документы\GitHub\Oracle\BD Oracle\CourseBD\CourseBD\obj\Debug\CourseBD.csproj.CopyComplete
